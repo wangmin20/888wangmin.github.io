@@ -1,177 +1,58 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>table and list</title>
+<!DOCTYPE html>        <!-- 声明文档。定义html -->
+<html lang="en">         <!-- 元素是页面的根元素 -->
+<head>                     <!-- 元素包含文档的元数据 -->
+    <meta charset="UTF-8">   <!-- 定义网页编码格式 -->
+    <title>第一个项目</title>  <!-- 元素描述了文档的标题-->
 </head>
-<body>
-    <h3 style="color:green">下面开始建立一个表格</h3>
-
-    <table border="1" cellpadding="10" cellspacing="10">   <!-- border代表边框的粗细。为0时就没有边框了。cellpadding设置表格内的边距-->
-        <!--cellspacing设置单元格间距 -->
-        <caption><b>学生基本信息</b></caption>  <!--添加表头信息--><!-- -->
-        <tr>
-            <th>姓名</th>
-            <th>年龄</th>
-            <th>体重(kg)</th>
-        </tr>
-        <tr>
-            <td>小明</td>
-            <td>20</td>
-            <td>67</td>
-        </tr>
-        <tr>
-            <td>大白</td>
-            <td>23</td>
-            <td>75</td>
-        </tr>
-        <tr>
-            <td>李白</td>
-            <td>28</td>
-            <td>80</td>
-        </tr>
-    </table>
-    <h3 style="color:green">跨行或跨列的表格</h3>
-    <table border="1">
-        <tr>
-            <th>职业</th>
-            <th>收入</th>
-            <th colspan="3">手机号两个到三个联系方式</th>
-        </tr>
-        <tr>
-            <td>老师</td>
-            <td>5000</td>
-            <td>182222</td>
-            <td>182222</td>
-            <td>182222</td>
-        </tr>
-        <tr>
-            <td>医生</td>
-            <td>7000</td>
-            <td>19999</td>
-            <td>19999</td>
-            <td>-</td>
-        </tr>
-    </table>
+<body><!--元素包含了页面可以看见的内容。定义文档主体。-->
+    <p>这个p是段落。可以把很多文字放到里面去。比如这是一段文字。</p>
+    <p>这是另一个段落。</p>
+    <h1>这是h1标题</h1><!-- 通过<h1>-<h6>标签来定义 -->
+    <h2>这是h2标题</h2>
+    <h3>这是h3标题</h3>
+    <h4>这是h4标题</h4>
+    <h5>这是h5标题</h5>
+    <h6>这是h6标题</h6>
+    <hr><!--定义水平线-->
+    <p>这是一个段落。插入图片</p>
+    <a href="www.baidu.com">这是跳转到的百度链接</a>  <!--<a>标签来定义。在 href 属性中指定链接的地址。-->
+    <br><!--换行-->
+    <img src="images/one.jpg" alt="" width="500" height="500">   <!--图像是通过标签 <img> 来定义的。 -->
+    <img src="images/two.jpg" alt="" width="500" height="500">
+    <hr>
+<!--文本格式化的标签-->
+    <b>这是一句话。定义粗体</b>
+    <em>这是一句话。定义着重文字</em>
+    <i>这是一句话。定义斜体</i>
+    <small>这是一句话。定义小字号</small>
+    <strong>这是一句话。定义加重语气</strong>
+    <p>插入<sub>这是一句话</sub>定义下标字</p>
+    <p>插入<sup>这是一句话</sup>定义上标字</p>
+    <ins>这是一句话。定义插入字</ins>
+    <del>这是一句话。定义删除字</del>
+<!-- 计算机输出标签 -->
+    <hr>
+    <p>这是计算机输出标签</p>
+    <code >#定义计算机代码print("hello world!")
+    </code>
     <br>
-    <table border="1">
-        <tr>
-            <th>姓名</th>
-            <td>小黑</td>
-
-        </tr>
-        <tr>
-            <th rowspan="3">电话号</th>
-            <td>182222</td>
-        </tr>
-        <tr>
-            <td>189999</td>
-        </tr>
-        <tr>
-            <td>133333</td>
-        </tr>
-    </table>
-<h3 style="color:green">表格内的标签</h3>
-    <table border="1">
-        <tr>
-            <td>
-                <p>这是一个段落</p>
-                <p>另一个段落</p>
-            </td>
-            <td>
-                <p>这个段落中还有一个表格</p>
-                <table border="1">
-                    <tr>
-                        <td>姓名</td>
-                        <td>qq/微信/电话</td>
-                    </tr>
-                    <tr>
-                        <td>baby</td>
-                        <td>我不加你哈哈</td>
-                    </tr>
-
-                </table>
-
-            </td>
-            <td>How are you！</td>
-        </tr>
-        <tr>
-            <td><p>这里面还有一个列表</p>
-                <ul>
-                    <li>red</li>
-                    <li>blue</li>
-                    <li>black</li>
-                </ul>
-
-            </td>
-            <td>
-                <img src="images/smile.jpg" alt="" width="50" height="50">
-                <p>这是一张图片</p>
-            </td>
-            <td>
-                <p>这是一个链接</p>
-                <a href="www.baidu.com">百度一下吧</a>
-            </td>
-        </tr>
-    </table>
-    <h3 style="color:blue">下面是列表的使用</h3>
-    <b>无序列表：</b>
-    <ul>
-        <li>apple</li>
-        <li>banana</li>
-        <li>pear</li>
-    </ul>
-    <b>有序列表：</b>
-    <ol>
-        <li>apple</li>
-        <li>banana</li>
-        <li>pear</li>
-    </ol>
-    <ol type="A">  <!-- 根据type属性来设置排序列表的类型。-->
-        <li>apple</li>
-        <li>banana</li>
-        <li>pear</li>
-    </ol>
-    <ul style="list-style-type:circle">
-        <li>apple</li>
-        <li>banana</li>
-        <li>pear</li>
-    </ul>
-    <h4>嵌套列表：</h4>
-    <ul>
-      <li>Coffee</li>
-      <li>Tea
-        <ul>
-          <li>Black tea</li>
-          <li>Green tea</li>
-        </ul>
-      </li>
-      <li>Milk</li>
-    </ul>
-    <h4>嵌套列表：</h4>
-    <ul>
-      <li>Coffee</li>
-      <li>Tea
-        <ul>
-          <li>Black tea</li>
-          <li>Green tea
-            <ul>
-              <li>China</li>
-              <li>Africa</li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-      <li>Milk</li>
-    </ul>
-    <h4>一个自定义列表</h4><!--dt为自定义列表项目 定义自定列表项的描述-->
-    <dl>
-        <dt>fruit</dt>
-        <dd>- apple</dd>
-        <dd>- banana</dd>
-        <dt>food</dt>
-        <dd>- dumping</dd>
-        <dd>- hamburger</dd>
-    </dl>
+    <kbd>定义键盘码</kbd>
+    <br>
+    <samp>定义计算机代码样本</samp>
+    <br>
+    <var>定义变量</var>
+    <pre>定义预格式文本</pre>
+    <p><b>注释：</b>这些标签常用于显示计算机/编程代码。</p>
+<!-- HTML 引文 引用 标签定义 -->
+    <hr>
+    <abbr title="">定义缩写</abbr>
+    <address>定义地址</address>
+    <p><bdo dir="rtl">该段落文字从右到左显示。</bdo></p>
+    <blockquote>定义长的引用</blockquote>
+    <q>定义短的引用</q>
+    <br>
+    <cite>定义引用、引证</cite>
+    <br>
+    <dfn>定义一个定义项目</dfn>
 </body>
 </html>
