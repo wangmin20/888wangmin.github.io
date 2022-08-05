@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>table and list</title>
+</head>
+<body>
+    <h3 style="color:green">下面开始建立一个表格</h3>
+
+    <table border="1" cellpadding="10" cellspacing="10">   <!-- border代表边框的粗细。为0时就没有边框了。cellpadding设置表格内的边距-->
+        <!--cellspacing设置单元格间距 -->
+        <caption><b>学生基本信息</b></caption>  <!--添加表头信息--><!-- -->
+        <tr>
+            <th>姓名</th>
+            <th>年龄</th>
+            <th>体重(kg)</th>
+        </tr>
+        <tr>
+            <td>小明</td>
+            <td>20</td>
+            <td>67</td>
+        </tr>
+        <tr>
+            <td>大白</td>
+            <td>23</td>
+            <td>75</td>
+        </tr>
+        <tr>
+            <td>李白</td>
+            <td>28</td>
+            <td>80</td>
+        </tr>
+    </table>
+    <h3 style="color:green">跨行或跨列的表格</h3>
+    <table border="1">
+        <tr>
+            <th>职业</th>
+            <th>收入</th>
+            <th colspan="3">手机号两个到三个联系方式</th>
+        </tr>
+        <tr>
+            <td>老师</td>
+            <td>5000</td>
+            <td>182222</td>
+            <td>182222</td>
+            <td>182222</td>
+        </tr>
+        <tr>
+            <td>医生</td>
+            <td>7000</td>
+            <td>19999</td>
+            <td>19999</td>
+            <td>-</td>
+        </tr>
+    </table>
+    <br>
+    <table border="1">
+        <tr>
+            <th>姓名</th>
+            <td>小黑</td>
+
+        </tr>
+        <tr>
+            <th rowspan="3">电话号</th>
+            <td>182222</td>
+        </tr>
+        <tr>
+            <td>189999</td>
+        </tr>
+        <tr>
+            <td>133333</td>
+        </tr>
+    </table>
+<h3 style="color:green">表格内的标签</h3>
+    <table border="1">
+        <tr>
+            <td>
+                <p>这是一个段落</p>
+                <p>另一个段落</p>
+            </td>
+            <td>
+                <p>这个段落中还有一个表格</p>
+                <table border="1">
+                    <tr>
+                        <td>姓名</td>
+                        <td>qq/微信/电话</td>
+                    </tr>
+                    <tr>
+                        <td>baby</td>
+                        <td>我不加你哈哈</td>
+                    </tr>
+
+                </table>
+
+            </td>
+            <td>How are you！</td>
+        </tr>
+        <tr>
+            <td><p>这里面还有一个列表</p>
+                <ul>
+                    <li>red</li>
+                    <li>blue</li>
+                    <li>black</li>
+                </ul>
+
+            </td>
+            <td>
+                <img src="images/smile.jpg" alt="" width="50" height="50">
+                <p>这是一张图片</p>
+            </td>
+            <td>
+                <p>这是一个链接</p>
+                <a href="www.baidu.com">百度一下吧</a>
+            </td>
+        </tr>
+    </table>
+    <h3 style="color:blue">下面是列表的使用</h3>
+    <b>无序列表：</b>
+    <ul>
+        <li>apple</li>
+        <li>banana</li>
+        <li>pear</li>
+    </ul>
+    <b>有序列表：</b>
+    <ol>
+        <li>apple</li>
+        <li>banana</li>
+        <li>pear</li>
+    </ol>
+    <ol type="A">  <!-- 根据type属性来设置排序列表的类型。-->
+        <li>apple</li>
+        <li>banana</li>
+        <li>pear</li>
+    </ol>
+    <ul style="list-style-type:circle">
+        <li>apple</li>
+        <li>banana</li>
+        <li>pear</li>
+    </ul>
+    <h4>嵌套列表：</h4>
+    <ul>
+      <li>Coffee</li>
+      <li>Tea
+        <ul>
+          <li>Black tea</li>
+          <li>Green tea</li>
+        </ul>
+      </li>
+      <li>Milk</li>
+    </ul>
+    <h4>嵌套列表：</h4>
+    <ul>
+      <li>Coffee</li>
+      <li>Tea
+        <ul>
+          <li>Black tea</li>
+          <li>Green tea
+            <ul>
+              <li>China</li>
+              <li>Africa</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>Milk</li>
+    </ul>
+    <h4>一个自定义列表</h4><!--dt为自定义列表项目 定义自定列表项的描述-->
+    <dl>
+        <dt>fruit</dt>
+        <dd>- apple</dd>
+        <dd>- banana</dd>
+        <dt>food</dt>
+        <dd>- dumping</dd>
+        <dd>- hamburger</dd>
+    </dl>
+</body>
+</html>
