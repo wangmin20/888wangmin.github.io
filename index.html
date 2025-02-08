@@ -52,7 +52,7 @@
             let year = date.getFullYear();
             let month = (date.getMonth() + 1).toString().padStart(2, '0');
             let day = date.getDate().toString().padStart(2, '0');
-            return `${year} 年 ${month} 月 ${day} 日`;
+            return `${year}/${month}/${day}`;  /* 格式改为 年/月/日 */
         }
 
         const today = new Date();
