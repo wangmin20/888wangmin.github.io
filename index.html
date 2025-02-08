@@ -17,8 +17,9 @@
         }
 
         #date {
-            font-size: 10vw;  /* 默认情况下使用视口宽度的 10% 作为字体大小 */
+            font-size: 10vw;  /* 默认情况下，字体大小根据视口宽度的10%调整 */
             text-align: center;
+            white-space: nowrap;  /* 防止文本换行 */
         }
 
         /* 针对横屏模式的手机或平板 */
@@ -31,7 +32,7 @@
         /* 针对平板设备和较大屏幕 */
         @media (min-width: 768px) {
             #date {
-                font-size: 10vh;  /* 更大屏幕使用 10% 视口高度 */
+                font-size: 8vh;  /* 更大屏幕使用视口高度的8% */
             }
         }
 
