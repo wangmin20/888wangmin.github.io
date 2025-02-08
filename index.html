@@ -22,6 +22,10 @@
             white-space: nowrap;  /* 防止文本换行 */
         }
 
+        .slash {
+            color: green;  /* 设置斜杠为绿色 */
+        }
+
         /* 针对横屏模式的手机或平板 */
         @media (orientation: landscape) {
             #date {
@@ -52,11 +56,12 @@
             let year = date.getFullYear();
             let month = (date.getMonth() + 1).toString().padStart(2, '0');
             let day = date.getDate().toString().padStart(2, '0');
-            return `${year}/${month}/${day}`;  /* 格式改为 年/月/日 */
+            // 用 span 包裹斜杠
+            return `${year}<span class="slash">/</span>${month}<span class="slash">/</span>${day}`;
         }
 
         const today = new Date();
-        document.getElementById("date").innerText = formatDate(today);
+        document.getElementById("date").innerHTML = formatDate(today);
     </script>
 </body>
 </html>
