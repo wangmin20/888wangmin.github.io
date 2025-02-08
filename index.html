@@ -17,7 +17,7 @@
         }
 
         #date {
-            font-size: 15vw;  /* 设置一个大字体大小 */
+            font-size: 20vw;  /* 初始字体大小为视口宽度的20% */
             text-align: center;
             white-space: nowrap;  /* 防止文本换行 */
         }
@@ -25,21 +25,21 @@
         /* 针对横屏模式的手机或平板 */
         @media (orientation: landscape) {
             #date {
-                font-size: 25vw;  /* 横屏时字体进一步增大 */
+                font-size: 40vw;  /* 横屏时字体进一步增大 */
             }
         }
 
         /* 针对平板设备和较大屏幕 */
         @media (min-width: 768px) {
             #date {
-                font-size: 12vh;  /* 更大屏幕使用 12% 视口高度 */
+                font-size: 20vh;  /* 使用视口高度的20%作为字体大小 */
             }
         }
 
         /* 针对手机设备 */
         @media (max-width: 767px) {
             #date {
-                font-size: 18vw;  /* 在手机上字体较大 */
+                font-size: 30vw;  /* 在手机上字体足够大 */
             }
         }
     </style>
