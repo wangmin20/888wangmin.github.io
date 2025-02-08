@@ -13,8 +13,11 @@
             align-items: center;
             background-color: black;
             color: white;
-            font-size: 2rem;
             font-family: Arial, sans-serif;
+        }
+        
+        #date {
+            font-size: 7.5vh; /* 字体大小占视口高度的 75% */
         }
     </style>
 </head>
@@ -26,7 +29,7 @@
             let year = date.getFullYear();
             let month = (date.getMonth() + 1).toString().padStart(2, '0');
             let day = date.getDate().toString().padStart(2, '0');
-            return `${year}年${month}月${day}日`;
+            return `${year} 年 ${month} 月 ${day} 日`;
         }
 
         const today = new Date();
