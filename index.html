@@ -17,9 +17,29 @@
         }
 
         #date {
-            font-size: 10rem;  /* 设置初始字体大小 */
-            line-height: 0.75;  /* 使行高占页面 75% */
+            font-size: 10vw;  /* 默认情况下使用视口宽度的 10% 作为字体大小 */
             text-align: center;
+        }
+
+        /* 针对横屏模式的手机或平板 */
+        @media (orientation: landscape) {
+            #date {
+                font-size: 20vw;  /* 横屏时字体变大 */
+            }
+        }
+
+        /* 针对平板设备和较大屏幕 */
+        @media (min-width: 768px) {
+            #date {
+                font-size: 10vh;  /* 更大屏幕使用 10% 视口高度 */
+            }
+        }
+
+        /* 针对手机设备 */
+        @media (max-width: 767px) {
+            #date {
+                font-size: 12vw;  /* 在手机上字体稍微大一些 */
+            }
         }
     </style>
 </head>
