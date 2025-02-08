@@ -19,14 +19,15 @@
 
         #date {
             text-align: center;
+            line-height: 0.9;  /* 缩小行间距 */
         }
 
         #year {
-            font-size: 20vw;  /* 年份的字体较大 */
+            font-size: 12vw;  /* 年份的字体较小 */
         }
 
         #month-day {
-            font-size: 15vw;  /* 月日的字体稍小 */
+            font-size: 20vw;  /* 月日的字体较大 */
         }
 
         .slash {
@@ -36,30 +37,30 @@
         /* 针对横屏模式的手机或平板 */
         @media (orientation: landscape) {
             #year {
-                font-size: 30vw;
+                font-size: 18vw;
             }
             #month-day {
-                font-size: 20vw;
+                font-size: 25vw;
             }
         }
 
         /* 针对平板设备和较大屏幕 */
         @media (min-width: 768px) {
             #year {
-                font-size: 15vh;
+                font-size: 10vh;
             }
             #month-day {
-                font-size: 12vh;
+                font-size: 18vh;
             }
         }
 
         /* 针对手机设备 */
         @media (max-width: 767px) {
             #year {
-                font-size: 25vw;
+                font-size: 15vw;
             }
             #month-day {
-                font-size: 20vw;
+                font-size: 25vw;
             }
         }
     </style>
