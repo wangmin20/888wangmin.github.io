@@ -9,6 +9,7 @@
             margin: 0;
             height: 100vh;
             display: flex;
+            flex-direction: column;  /* 让内容竖着显示 */
             justify-content: center;
             align-items: center;
             background-color: black;
@@ -17,51 +18,78 @@
         }
 
         #date {
-            font-size: 20vw;  /* 初始字体大小为视口宽度的20% */
             text-align: center;
-            white-space: nowrap;  /* 防止文本换行 */
+        }
+
+        #year {
+            font-size: 20vw;  /* 年份的字体较大 */
+        }
+
+        #month-day {
+            font-size: 15vw;  /* 月日的字体稍小 */
         }
 
         .slash {
-            color: green;  /* 设置斜杠为绿色 */
+            color: green;  /* 斜杠的颜色设置为绿色 */
         }
 
         /* 针对横屏模式的手机或平板 */
         @media (orientation: landscape) {
-            #date {
-                font-size: 40vw;  /* 横屏时字体进一步增大 */
+            #year {
+                font-size: 30vw;
+            }
+            #month-day {
+                font-size: 20vw;
             }
         }
 
         /* 针对平板设备和较大屏幕 */
         @media (min-width: 768px) {
-            #date {
-                font-size: 20vh;  /* 使用视口高度的20%作为字体大小 */
+            #year {
+                font-size: 15vh;
+            }
+            #month-day {
+                font-size: 12vh;
             }
         }
 
         /* 针对手机设备 */
         @media (max-width: 767px) {
-            #date {
-                font-size: 30vw;  /* 在手机上字体足够大 */
+            #year {
+                font-size: 25vw;
+            }
+            #month-day {
+                font-size: 20vw;
             }
         }
     </style>
 </head>
 <body>
-    <div id="date"></div>
+    <div id="date">
+        <div id="year"></div>
+        <div id="month-day"></div>
+    </div>
 
     <script>
         function formatDate(date) {
             let year = date.getFullYear();
-            let month = (date.getMonth() + 1).toString().padStart(2, '0');
-            let day = date.getDate().toString().padStart(2, '0');
-            // 用 span 包裹斜杠
-            return `${year}<span class="slash">/</span>${month}<span class="slash">/</span>${day}`;
+            let month = date.getMonth() + 1;
+            let day = date.getDate();
+
+            // 格式化为两位数
+            month = month < 10 ? month : month;
+            day = day < 10 ? day : day;
+
+            return {
+                year: year,
+                monthDay: `${month}<span class="slash">/</span>${day}`
+            };
         }
 
         const today = new Date();
-        document.getElementById("date").innerHTML = formatDate(today);
+        const formattedDate = formatDate(today);
+        document.getElementById("year").innerText = formattedDate.year;
+        document.getElementById("month-day").innerHTML = formattedDate.monthDay;
     </script>
 </body>
 </html>
