@@ -82,13 +82,10 @@
             let month = date.getMonth() + 1;
             let day = date.getDate();
 
-            // 格式化为两位数
-            month = month < 10 ? '0' + month : month;
-            day = day < 10 ? '0' + day : day;
-
+            // 月和日保持原样，直接显示实际数值
             return {
                 year: year,
-                monthDay: `${month}<span class="slash">-</span>${day}`  // 修改为破折号
+                monthDay: `${month}<span class="slash">-</span>${day}`  // 使用破折号
             };
         }
 
