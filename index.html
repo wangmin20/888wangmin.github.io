@@ -89,10 +89,19 @@
             };
         }
 
-        const today = new Date();
-        const formattedDate = formatDate(today);
-        document.getElementById("year").innerText = formattedDate.year;
-        document.getElementById("month-day").innerHTML = formattedDate.monthDay;
+        // 更新日期的函数
+        function updateDate() {
+            const today = new Date();
+            const formattedDate = formatDate(today);
+            document.getElementById("year").innerText = formattedDate.year;
+            document.getElementById("month-day").innerHTML = formattedDate.monthDay;
+        }
+
+        // 页面加载时立即显示日期
+        updateDate();
+
+        // 每分钟更新一次日期
+        setInterval(updateDate, 60000);  // 每60秒更新一次日期
     </script>
 </body>
 </html>
