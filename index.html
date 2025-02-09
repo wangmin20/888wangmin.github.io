@@ -5,12 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>显示日期</title>
     <style>
-        /* 引入 LED 数码管字体 Digital-7 */
-        @font-face {
-            font-family: 'Digital-7';
-            src: url('https://cdn.jsdelivr.net/gh/ejci/digital-font/Digital-7.woff') format('woff');
-        }
-
         body {
             margin: 0;
             height: 100vh;
@@ -18,24 +12,27 @@
             flex-direction: column;
             background-color: black;
             color: white;
-            font-family: 'Digital-7', monospace; /* 使用 LED 数码管字体 */
-            position: relative;
+            font-family: Arial, sans-serif;
+            position: relative;  /* 使其成为相对定位 */
         }
 
         #date {
-            position: absolute;
-            top: 10%; /* 离顶部10% */
-            left: 50%;
-            transform: translateX(-50%);
-            text-align: center;
+            position: absolute;  /* 使日期绝对定位 */
+            top: 10%;  /* 离顶部10% */
+            left: 50%;  /* 离左边50% */
+            transform: translateX(-50%);  /* 将日期向左偏移自身宽度的一半 */
+            text-align: center;  /* 中间对齐 */
+            line-height: 0.9;  /* 缩小行间距 */
         }
 
         #year {
             font-size: 12vw;  /* 年份的字体较小 */
+            font-weight: bold;  /* 将年份加粗 */
         }
 
         #month-day {
             font-size: 20vw;  /* 月日的字体较大 */
+            font-weight: bold;  /* 将月日加粗 */
         }
 
         .slash {
@@ -86,8 +83,8 @@
             let day = date.getDate();
 
             // 格式化为两位数
-            month = month < 10 ? '0' + month : month;
-            day = day < 10 ? '0' + day : day;
+            month = month < 10 ? month : month;
+            day = day < 10 ? day : day;
 
             return {
                 year: year,
