@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>显示日期</title>
     <style>
+        /* 引入数码管字体 DS-Digital */
         @font-face {
-            font-family: 'Digital-7';
-            src: url('https://cdn.jsdelivr.net/gh/ejci/digital-font/Digital-7.woff') format('woff');
+            font-family: 'DS-Digital';
+            src: url('https://cdn.jsdelivr.net/gh/ejci/digital-font/DS-Digital.woff') format('woff');
         }
 
         body {
@@ -17,13 +18,13 @@
             flex-direction: column;
             background-color: black;
             color: white;
-            font-family: 'Digital-7', monospace;  /* 使用数码管字体 */
+            font-family: 'DS-Digital', monospace; /* 使用数码管字体 */
             position: relative;
         }
 
         #date {
             position: absolute;
-            top: 10%;  /* 离顶部10% */
+            top: 10%; /* 离顶部10% */
             left: 50%;
             transform: translateX(-50%);
             text-align: center;
@@ -31,12 +32,10 @@
 
         #year {
             font-size: 12vw;  /* 年份的字体较小 */
-            font-weight: normal;
         }
 
         #month-day {
             font-size: 20vw;  /* 月日的字体较大 */
-            font-weight: normal;
         }
 
         .slash {
